@@ -70,7 +70,7 @@ sudo mkfs.ext4 /dev/data_vg/data_lv
 
 sudo mount /dev/data_vg/data_lv /mnt/data
 
-При добавлении нового диска (например, /dev/sdc):
+### При добавлении нового диска (например, /dev/sdc):
 
 sudo pvcreate /dev/sdc
 
