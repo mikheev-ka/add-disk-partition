@@ -71,9 +71,13 @@ sudo mkfs.ext4 /dev/data_vg/data_lv
 sudo mount /dev/data_vg/data_lv /mnt/data
 
 При добавлении нового диска (например, /dev/sdc):
+
 sudo pvcreate /dev/sdc
+
 sudo vgextend data_vg /dev/sdc
+
 sudo lvextend -l +100%FREE /dev/data_vg/data_lv
+
 sudo resize2fs /dev/data_vg/data_lv
 
 Теперь /mnt/data увеличится без необходимости создавать новую точку монтирования.
