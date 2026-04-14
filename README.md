@@ -8,9 +8,6 @@
 
 ### 1. Создаём раздел
 
-```bash
-sudo fdisk /dev/sdb
-```bash
 sudo fdisk /dev/sdb
 Внутри fdisk:
 
@@ -21,11 +18,9 @@ sudo fdisk /dev/sdb
 Нажмите w для записи таблицы разделов
 
 2. Форматируем раздел (например, в ext4)
-bash
 sudo mkfs.ext4 /dev/sdb1
 
 3. Создаём точку монтирования и монтируем
-bash
 sudo mkdir -p /mnt/data
 sudo mount /dev/sdb1 /mnt/data
 
@@ -57,7 +52,9 @@ df -h
 Альтернативы для гибкого управления
 Если в будущем потребуется расширять пространство без создания новых точек монтирования, рассмотрите использование LVM (Logical Volume Manager).
 
-Пример создания LVM:
+
+
+## Пример создания LVM:
 
 # Создаём физический том
 sudo pvcreate /dev/sdb
