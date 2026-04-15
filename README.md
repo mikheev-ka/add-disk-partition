@@ -22,6 +22,7 @@ sudo mkfs.ext4 /dev/sdb1
 
 ### 3. Создаём точку монтирования и монтируем
 sudo mkdir -p /mnt/data
+
 sudo mount /dev/sdb1 /mnt/data
 
 ### 4. Добавляем в /etc/fstab для автоматического монтирования
