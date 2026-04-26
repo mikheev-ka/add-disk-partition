@@ -83,9 +83,9 @@ sudo resize2fs /dev/data_vg/data_lv
 
 Теперь /mnt/data увеличится без необходимости создавать новую точку монтирования.
 
-Для автоонтирования:
-# узнайте UUID логического тома
+# Для автоонтирования:
+### узнайте UUID логического тома
 blkid /dev/data_vg/data_lv
 
-# в /etc/fstab пропишите:
+### в /etc/fstab пропишите:
 UUID=полученный-uid /mnt/share ext4 defaults 0 2
